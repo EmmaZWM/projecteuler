@@ -3,6 +3,8 @@ from math import sqrt
 def is_prime(_var):
     if _var < 2:
         return False
+    if _var == 2:
+        return True
     if _var & (_var-1)==0:
         return False
     for i in xrange(2, int(sqrt(_var)) +1):
@@ -22,7 +24,6 @@ result = []
 primes = {2:1,3:1,5:1,7:1}
 x = 11
 while count != 11:
-    print x 
     if not is_prime(x):
         x += 1
         continue
@@ -35,5 +36,4 @@ while count != 11:
              count += 1
              result.append(x)
     x += 1
-print result
 print sum(result)
