@@ -17,7 +17,7 @@ def is_pandigital_number(x):
         return True, result
     return False, result
 
-for i in xrange(59876, 1, -1):
+for i in xrange(9876, 1, -1):
     ok, result = is_pandigital_number(i)
     if ok:
         print result
