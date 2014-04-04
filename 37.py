@@ -5,7 +5,7 @@ def is_prime(_var):
         return False
     if _var == 2:
         return True
-    if _var & (_var-1)==0:
+    if _var & 1 ==0:
         return False
     for i in xrange(2, int(sqrt(_var)) +1):
         if _var % i == 0:
@@ -31,7 +31,9 @@ while count != 11:
     x_str = str(x)
     x_len = len(x_str)
     left_truncators = [int(left_truncate(x_str, i)) for i in range(1, x_len)]
+    print left_truncators
     right_trucators = [int(right_trucate(x_str, i)) for i in range(1, x_len)]
+    print [left in primes for left in left_truncators]
     if all([left in primes for left in left_truncators]) and all([right in primes for right in right_trucators]):
              count += 1
              result.append(x)

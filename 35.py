@@ -5,7 +5,7 @@ def is_prime(x):
         return False
     if x == 2:
         return True
-    if x & (x-1) == 0:
+    if x & 1 == 0:
         return False
     
     for i in range(2, int(math.sqrt(x)) + 1):
